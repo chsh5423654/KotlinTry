@@ -1,5 +1,7 @@
 package com.chsh.kotlintry
 
+import com.chsh.kotlintry.test.otherwise
+import com.chsh.kotlintry.test.yes
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -14,4 +16,20 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun testBoolean(){
+        getABoolean().yes{
+            println("OK")
+        }.otherwise{
+            println("Otherwise")
+        }
+    }
+
+
+
+
+    fun getABoolean() = false
+
+
 }
