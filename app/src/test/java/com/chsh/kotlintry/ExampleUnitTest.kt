@@ -1,5 +1,6 @@
 package com.chsh.kotlintry
 
+import com.chsh.kotlintry.test.no
 import com.chsh.kotlintry.test.otherwise
 import com.chsh.kotlintry.test.yes
 import org.junit.Test
@@ -18,15 +19,27 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun testBoolean(){
-        getABoolean().yes{
-            println("OK")
-        }.otherwise{
-            println("Otherwise")
+    fun testBoolean() {
+        val result = true.yes {
+            1
+        }.otherwise {
+            3
+        }
+
+
+        val result2 = false.yes {
+            1
+        }.otherwise {
+            3
+        }
+
+
+        val result3 = true.no {
+
+        }.otherwise {
+
         }
     }
-
-
 
 
     fun getABoolean() = false
