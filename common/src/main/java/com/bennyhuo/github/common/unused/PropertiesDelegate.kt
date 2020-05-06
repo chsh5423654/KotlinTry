@@ -8,9 +8,6 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 import kotlin.reflect.full.isSuperclassOf
 
-/**
- * Created by benny on 8/12/17.
- */
 class PropertiesDelegate(private val path: String) {
 
     private lateinit var url: URL
